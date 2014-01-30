@@ -13,3 +13,4 @@
 
 Route::get('/', 'HomeController@showWelcome');
 Route::get('/Quotation', 'QuotationController@index');
+Route::get('/Quotation/{id}', 'QuotationController@detail');

@@ -21,8 +21,20 @@ class QuotationController extends BaseController {
 	}
 	
 	public function index(){
-		$quotation = DB::select('SELECT id, quotation_name, status, last_updated FROM quotation WHERE del = 0');
-		return View::make('index', array('quotations' => $quotation))
+		$quotations = DB::select('SELECT id, quotation_name, status, last_updated FROM quotation WHERE del = 0');
+		return View::make('quotation/index', array('quotations' => $quotations))
+					->nest('silder', 'silder');
+	}
+	
+	public function detail($id){
+		$quotation = DB::table('quotation')->where('id', $id)->first();
+		$quotation_items = DB::select('SELECT * FROM item WHERE quotation_id = ?', array($id));
+		
+		$company = DB::table('company')->where('id', $quotation->company_id)->first();
+		
+		return View::make('quotation/detail', array('quotation' => $quotation,
+													'items' => $quotation_items,
+													'company' => $company))
 					->nest('silder', 'silder');
 	}
 

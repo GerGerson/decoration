@@ -7,6 +7,7 @@
 <!-- END SILDER -->
 
 <div class="page-content">
+	<h2>報價單</h2>
 	<!-- BEGIN SAMPLE TABLE PORTLET-->
 	<div class="portlet box blue">
 		<div class="portlet-title">
@@ -46,10 +47,10 @@
 
 <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script>
-jQuery(document).ready(function($) {
-      $(".quotation_row").click(function() {
+	jQuery(document).ready(function($) {
+		$(".quotation_row").click(function() {
             window.document.location = $(this).attr("href");
-      });
-});
+		});
+	});
 </script>
 @stop
