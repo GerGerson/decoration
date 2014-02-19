@@ -19,15 +19,16 @@ var Login = function () {
 
 	            messages: {
 	                username: {
-	                    required: "Username is required."
+	                    required: "輸入用戶名"
 	                },
 	                password: {
-	                    required: "Password is required."
+	                    required: "輸入用密碼"
 	                }
 	            },
 
 	            invalidHandler: function (event, validator) { //display error alert on form submit   
 	                $('.alert-danger', $('.login-form')).show();
+					$('#LoginFail').hide();
 	            },
 
 	            highlight: function (element) { // hightlight error inputs
@@ -44,15 +45,15 @@ var Login = function () {
 	                error.insertAfter(element.closest('.input-icon'));
 	            },
 
-	            submitHandler: function (form) {
-	                form.submit();
-	            }
+	            //submitHandler: function (form) {
+	              //  form.submit();
+	            //}
 	        });
 
 	        $('.login-form input').keypress(function (e) {
 	            if (e.which == 13) {
 	                if ($('.login-form').validate().form()) {
-	                    $('.login-form').submit();
+	                   // $('.login-form').submit();
 	                }
 	                return false;
 	            }
