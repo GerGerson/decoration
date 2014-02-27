@@ -181,7 +181,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 				<img alt="" src="assets/img/avatar1_small.jpg"/>
 				<span class="username">
-					Bob Nilson
+					<?= (isset($_COOKIE["decoration_cname"])) ? $_COOKIE["decoration_cname"] : trim("你好"); ?>
 				</span>
 				<i class="fa fa-angle-down"></i>
 				</a>

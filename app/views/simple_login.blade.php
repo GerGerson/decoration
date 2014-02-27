@@ -49,19 +49,9 @@
 		<div id="NoInput" class="alert alert-danger display-hide">
 			<button class="close" data-close="alert"></button>
 			<span>
-				 輸入登入用戶名及密碼
+				 輸入登入密碼
 			</span>
 		</div>
-		
-		<div class="form-group">
-			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-			<label class="control-label visible-ie8 visible-ie9">用戶名</label>
-			<div class="input-icon">
-				<i class="fa fa-user"></i>
-				<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用戶名" id="username" name="username"/>
-			</div>
-		</div>-
-		
 		<div class="form-group">
 			<label class="control-label visible-ie8 visible-ie9">密碼</label>
 			<div class="input-icon">
@@ -71,24 +61,24 @@
 		</div>
 		<div class="form-actions">
 			<label class="checkbox">
-			<input id="chk" type="checkbox" name="remember" value="1"/> 記住用戶名及密碼 </label>
+			<input id="chk" type="checkbox" name="remember" value="1"/> 記住密碼 </label>
 			<button type="submit" class="btn blue pull-right">
 			登入 <i class="m-icon-swapright m-icon-white"></i>
 			</button>
 		</div>
 		<div class="forget-password">
-			<h4>忘記登入用戶名及密碼？</h4>
+			<h4>忘記登入密碼？</h4>
 			<p>
 				按 <a href="javascript:;" id="forget-password">這裡</a>
-				取回登入用戶名及密碼。
+				取回登入密碼。
 			</p>
 		</div>
 	</form>
 	<!-- END LOGIN FORM -->
 	<!-- BEGIN FORGOT PASSWORD FORM -->
 	<form class="forget-form">
-		<h3>忘記登入用戶名及密碼？</h3>
-		<h4>用戶名及密碼就是你的手提電話號碼。</h4>
+		<h3>忘記登入密碼？</h3>
+		<h4>密碼就是你的手提電話號碼。</h4>
 		<div class="form-actions">
 			<button type="button" id="back-btn" class="btn">
 			<i class="m-icon-swapleft"></i> 返回 </button>
@@ -150,7 +140,7 @@
 									strHtml = "<div class='alert alert-danger'>";
 									strHtml += "<button class='close' data-close='alert'></button>";
 									strHtml += "<span>";
-									strHtml += "登入用戶名或密碼不正確";
+									strHtml += "登入密碼不正確";
 									strHtml += "</span>";
 									strHtml += "</div>";
 									

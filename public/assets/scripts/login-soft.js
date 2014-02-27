@@ -6,11 +6,11 @@ var Login = function () {
 	            errorClass: 'help-block', // default input error message class
 	            focusInvalid: false, // do not focus the last invalid input
 	            rules: {
-	                username: {
-	                    required: true
-	                },
+	                //username: {
+	                  //  required: true
+	                //},
 	                password: {
-	                    required: true
+	                   required: true
 	                },
 	                remember: {
 	                    required: false
@@ -18,9 +18,9 @@ var Login = function () {
 	            },
 
 	            messages: {
-	                username: {
-	                    required: "輸入用戶名"
-	                },
+	                //username: {
+	                 //   required: "輸入用戶名"
+	                //},
 	                password: {
 	                    required: "輸入用密碼"
 	                }

@@ -14,13 +14,29 @@ class RouteController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/	
-	public function RouteCheck()
+	public function LoginCheck()
 	{
-		if (isset($_COOKIE["decoration_uid"]) == false || isset($_COOKIE["decoration_cname"]) == false || isset($_COOKIE["decoration_ename"]) == false)
-		{
-			return Redirect::to('/Login');
-		}elseif (isset($_COOKIE["decoration_uid"]) == true && isset($_COOKIE["decoration_cname"]) == true && isset($_COOKIE["decoration_ename"]) == true){
-			return Redirect::to('/Quotation');
+		$LName = Input::get('Password');
+		$LPassword = Input::get('Password');
+		$SaveMode = Input::get('SaveMode');
+		
+		$data = DB::Select("SELECT * FROM UserInfo WHERE login_name = '". $LName ."' AND login_password = '". $LPassword ."'");
+
+		if (count($data) == 0){
+			echo (string)count($data);
+		}else{
+			$e_time = ($SaveMode == "false") ? 0 : time()+60*60*24*7;
+			
+			//Reset Cookie
+			setcookie("decoration_uid", "", 0);
+			setcookie("decoration_cname", "", 0);
+			setcookie("decoration_ename", "", 0);
+			
+			setcookie("decoration_uid", $data[0]->login_name, $e_time, "/");
+			setcookie("decoration_cname", $data[0]->user_chi_name, $e_time, "/");
+			setcookie("decoration_ename", $data[0]->user_eng_name, $e_time, "/");
+			
+			return "OK";
 		}
 	}
 	

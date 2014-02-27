@@ -78,3 +78,28 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+/*
+|
+|---------------------------
+| Self Defined Filter
+|----------------------------
+*/
+
+Route::filter('login_auth_check', function()
+{
+	if (isset($_COOKIE["decoration_uid"]) == false || isset($_COOKIE["decoration_cname"]) == false || isset($_COOKIE["decoration_ename"]) == false)
+	{
+		return View::make("simple_login");
+	}else{
+		return Redirect::to("/quotation");
+	}
+});
+
+Route::filter('quotation_auth_check', function()
+{
+	if (isset($_COOKIE["decoration_uid"]) == false || isset($_COOKIE["decoration_cname"]) == false || isset($_COOKIE["decoration_ename"]) == false)
+	{
+		return Redirect::to("/login");;
+	}
+});

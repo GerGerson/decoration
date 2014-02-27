@@ -10,14 +10,19 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', 'RouteController@RouteCheck');
 
-Route::get('/Login', function()
+/**********Login********/
+Route::post('/login/login_check', 'RouteController@LoginCheck');
+
+Route::group(array('before' => 'login_auth_check'), function()
 {
-	return View::make("login");
+	Route::get('/', '');
+	Route::get('/login', '');
 });
 
-Route::post('/Login/Checking', 'GeneralController@LoginValidate');
-
-Route::get('/Quotation', 'QuotationController@index');
-Route::get('/Quotation/{id}', 'QuotationController@detail');
+Route::group(array('before' => 'quotation_auth_check'), function()
+{
+	Route::get('/quotation', 'QuotationController@index');
+	Route::get('/quotation/{id}', 'QuotationController@index');
+});
+/**********Login********/
