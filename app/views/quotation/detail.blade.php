@@ -11,15 +11,15 @@
 	<div class="invoice col-xs-offset-2" style="margin-bottom:-35px">
 		<div class="row">
 			<div class="col-xs-10">
-				<p style="text-align:right"><strong>報價單編號 ： <?=sprintf("%06d", $quotation->id);?></strong></p>
+				<p style="text-align:right">報價單編號 ： <?=sprintf("%06d", $quotation->id);?></p>
 			</div>
 		</div>
 		<div class="row invoice-logo">
 			<div class="col-xs-10">
 				<address style="text-align:center">
-						<strong><h2>{{$company->company_name_cht}}</h2></strong><br/>
-					    <strong>地址：</strong>{{$company->company_address_cht}}<br/>
-						<strong>電話：</strong> {{$company->company_phone}} 
+						<h2>{{$company->company_name_cht}}</h2><br/>
+					    地址：{{$company->company_address_cht}}<br/>
+						電話： {{$company->company_phone}} 
 				</address>
 			</div>
 			
@@ -38,31 +38,31 @@
 				</ul>
 			</div>
 			<div class="col-xs-5 invoice-payment">
-				<h4><strong>備註</strong></h4>
+				<h4>備註</h4>
 				<ul class="list-unstyled" style="font-size: 12px; text-align:left">
 					@if ($quotation->remark_1 != "")
 						<li>
-							<strong>備註1 </strong> {{$quotation->remark_1}}
+							備註1 : {{$quotation->remark_1}}
 						</li>
 					@endif
 					@if ($quotation->remark_2 != "")
 						<li>
-							<strong>備註2 </strong> {{$quotation->remark_2}}
+							備註2 : {{$quotation->remark_2}}
 						</li>
 					@endif
 					@if ($quotation->remark_3 != "")
 						<li>
-							<strong>備註3 </strong> {{$quotation->remark_3}}
+							備註3 : {{$quotation->remark_3}}
 						</li>
 					@endif
 					@if ($quotation->remark_4 != "")
 						<li>
-							<strong>備註4 </strong> {{$quotation->remark_4}}
+							備註4 : {{$quotation->remark_4}}
 						</li>
 					@endif
 					@if ($quotation->remark_5 != "")
 						<li>
-							<strong>備註5 </strong> {{$quotation->remark_5}}
+							備註5 : {{$quotation->remark_5}}
 						</li>
 					@endif
 				</ul>
@@ -113,13 +113,13 @@
 				<table class="table table-striped table-hover">
 					<tbody>
 						<tr>
-							<td><strong>小結:</strong> $<?php echo number_format($total, 2)?></td>
+							<td>小結: $<?php echo number_format($total, 2)?></td>
 						</tr>
 						<tr>
-							<td><strong>折扣:</strong> 12.9%</td>
+							<td>折扣: 12.9%</td>
 						</tr>
 						<tr>
-							<td><strong>總額:</strong> $<?php echo number_format(($total - round($total * 0.129)), 2)?></td>
+							<td>總額: $<?php echo number_format(($total - round($total * 0.129)), 2)?></td>
 						</tr>
 					</tbody>
 				</table>
