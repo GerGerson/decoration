@@ -262,6 +262,15 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <script>
 jQuery(document).ready(function() {    
    App.init(); // initlayout and core plugins
+   
+   var ver = new String($.browser.version);
+   if ($.browser.chrome == true && ver.indexOf("33.",0) == 0){
+		$('p,a,h1,h2,h3,h4,span').addClass('webfontfix'); 
+		$('p,a,h1,h2,h3,h4,span').removeClass('webfontfix');
+   }
+   
+   
+   
 });
 </script>
 <!-- END JAVASCRIPTS -->
