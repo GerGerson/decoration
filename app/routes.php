@@ -25,4 +25,6 @@ Route::group(array('before' => 'quotation_auth_check'), function()
 	Route::get('/quotation', 'QuotationController@index');
 	Route::get('/quotation/{id}', 'QuotationController@detail');
 });
+
+Route::get('/logout', 'RouteController@Logout');
 /**********Login********/

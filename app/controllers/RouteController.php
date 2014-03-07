@@ -40,4 +40,12 @@ class RouteController extends BaseController {
 		}
 	}
 	
+	public function Logout()
+	{
+		setcookie("decoration_uid", "", 0);
+		setcookie("decoration_cname", "", 0);
+		setcookie("decoration_ename", "", 0);
+		
+		return Redirect::to('/');
+	}
 }
