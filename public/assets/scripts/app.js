@@ -910,8 +910,19 @@ var App = function () {
             setColor($.cookie('style_color'));
         }
     }
-
+	
     //* END:CORE HANDLERS *//
+	
+	//* BEGIN:SELF DEFINED FUNCTION *//
+	var handleBrowserFix = function(){
+		var ver = new String($.browser.version);
+	    if ($.browser.chrome == true && ver.indexOf("33.",0) == 0){
+			$('p,a,h1,h2,h3,h4,span').addClass('webfontfix'); 
+			$('p,a,h1,h2,h3,h4,span').removeClass('webfontfix');
+	    }
+	}
+	//* END:SELF DEFINED FUNCTION *//
+	
 
     return {
 
@@ -949,6 +960,9 @@ var App = function () {
             handleAccordions(); //handles accordions 
             handleModals(); // handle modals
             handleFullScreenMode(); // handles full screen
+			
+			//browser fix
+			handleBrowserFix();
         },
 
         //main function to initiate core javascript after ajax complete

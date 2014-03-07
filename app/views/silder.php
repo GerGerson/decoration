@@ -4,7 +4,7 @@
 		<!-- BEGIN SIDEBAR MENU -->
 		<ul class="page-sidebar-menu">
 			<li class="start active ">
-				<a href="/Quotation">
+				<a href="/quotation">
 					<i class="fa fa-home"></i>
 					<span class="title">報價單</span>
 					<span class="selected"></span>

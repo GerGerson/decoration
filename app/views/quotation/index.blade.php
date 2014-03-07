@@ -28,7 +28,7 @@
 					</thead>
 					<tbody>
 						@foreach ($quotations as $quotation)
-						<tr class="quotation_row" href="/Quotation/{{$quotation->id}}" style="cursor:pointer">
+						<tr class="quotation_row" href="/quotation/{{$quotation->id}}" style="cursor:pointer">
 							<td>{{$quotation->quotation_name}}</td>
 							@if ($quotation->status == 0)
 								<td><span class="label label-warning">Pending</span></td>

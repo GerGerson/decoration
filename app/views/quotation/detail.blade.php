@@ -126,7 +126,7 @@
 	<!-- END PAGE CONTENT-->
 </div>
 
-<script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script>
 jQuery(document).ready(function($) {
       $(".quotation_row").click(function() {

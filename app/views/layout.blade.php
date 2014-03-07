@@ -81,7 +81,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<li>
 								<a href="inbox.html?a=view">
 								<span class="photo">
-									<img src="./assets/img/avatar2.jpg" alt=""/>
+									<img src="/assets/img/avatar2.jpg" alt=""/>
 								</span>
 								<span class="subject">
 									<span class="from">
@@ -99,7 +99,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<li>
 								<a href="inbox.html?a=view">
 								<span class="photo">
-									<img src="./assets/img/avatar3.jpg" alt=""/>
+									<img src="/assets/img/avatar3.jpg" alt=""/>
 								</span>
 								<span class="subject">
 									<span class="from">
@@ -117,7 +117,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<li>
 								<a href="inbox.html?a=view">
 								<span class="photo">
-									<img src="./assets/img/avatar1.jpg" alt=""/>
+									<img src="/assets/img/avatar1.jpg" alt=""/>
 								</span>
 								<span class="subject">
 									<span class="from">
@@ -135,7 +135,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<li>
 								<a href="inbox.html?a=view">
 								<span class="photo">
-									<img src="./assets/img/avatar2.jpg" alt=""/>
+									<img src="/assets/img/avatar2.jpg" alt=""/>
 								</span>
 								<span class="subject">
 									<span class="from">
@@ -153,7 +153,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 							<li>
 								<a href="inbox.html?a=view">
 								<span class="photo">
-									<img src="./assets/img/avatar3.jpg" alt=""/>
+									<img src="/assets/img/avatar3.jpg" alt=""/>
 								</span>
 								<span class="subject">
 									<span class="from">
@@ -179,7 +179,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 			<!-- BEGIN USER LOGIN DROPDOWN -->
 			<li class="dropdown user">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-				<img alt="" src="assets/img/avatar1_small.jpg"/>
+				<img alt="" src="../assets/img/avatar1_small.jpg"/>
 				<span class="username">
 					<?= (isset($_COOKIE["decoration_cname"])) ? $_COOKIE["decoration_cname"] : trim("你好"); ?>
 				</span>
@@ -262,15 +262,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <script>
 jQuery(document).ready(function() {    
    App.init(); // initlayout and core plugins
-   
-   var ver = new String($.browser.version);
-   if ($.browser.chrome == true && ver.indexOf("33.",0) == 0){
-		$('p,a,h1,h2,h3,h4,span').addClass('webfontfix'); 
-		$('p,a,h1,h2,h3,h4,span').removeClass('webfontfix');
-   }
-   
-   
-   
 });
 </script>
 <!-- END JAVASCRIPTS -->
