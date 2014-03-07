@@ -916,10 +916,9 @@ var App = function () {
 	//* BEGIN:SELF DEFINED FUNCTION *//
 	var handleBrowserFix = function(){
 		var ver = new String($.browser.version);
-	    if ($.browser.chrome == true && ver.indexOf("33.",0) == 0){
-			$('p,a,h1,h2,h3,h4,span').addClass('webfontfix'); 
-			$('p,a,h1,h2,h3,h4,span').removeClass('webfontfix');
-	    }
+
+		$('p,a,h1,h2,h3,h4,span,tbody,th,td').addClass('webfontfix'); 
+		$('p,a,h1,h2,h3,h4,span,tbody,th,td').removeClass('webfontfix');
 	}
 	//* END:SELF DEFINED FUNCTION *//
 	
