@@ -9,6 +9,11 @@
 <div class="page-content" style="text-align:center;">
 	<!-- BEGIN PAGE CONTENT-->
 	<div class="invoice col-xs-offset-2" style="margin-bottom:-35px">
+		<div class="row">
+			<div class="col-xs-10">
+				<p style="text-align:right"><strong>報價單編號 ： <?=sprintf("%06d", $quotation->id);?></strong></p>
+			</div>
+		</div>
 		<div class="row invoice-logo">
 			<div class="col-xs-10">
 				<address style="text-align:center">
