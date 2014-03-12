@@ -16,7 +16,7 @@ class GeneralController extends BaseController {
 	*/
 
 	/********************Login***************/
-	public function LoginValidate()
+	/*public function LoginValidate()
 	{
 		$LName = Input::get('UserName');
 		$LPassword = Input::get('Password');
@@ -41,6 +41,40 @@ class GeneralController extends BaseController {
 			return "OK";
 		}
 		
-	}
+	}*/
 	/********************Login***************/
+	
+	//Quick Function
+	public function QuickInsertPassword()
+	{
+		$id = 2;
+		$password = "1234";
+		$sql = "UPDATE UserInfo Set login_password = '". hash('md5', $password) ."' WHERE id = " . $id;
+		$result = DB::update($sql);
+		
+		if (count($result) > 0){
+			echo hash('md5', $password);
+			//echo "Success : " . count($result) . " Rows(s)";
+		}else{
+			echo "Fail";
+		}
+	}
+	
+	public function QuickCheckPassword()
+	{
+		$id = 2;
+		$password = "1234";
+		$sql = "SELECT * FROM UserInfo WHERE id = " . $id;
+		$result = DB::select($sql);
+		
+		if (count($result) > 0){
+			if (Hash::check($password, $result[0]->login_password)){
+				echo "Correct";
+			}else{
+				echo "Fail";
+			}
+		}else{
+			echo "Fail";
+		}
+	}
 }

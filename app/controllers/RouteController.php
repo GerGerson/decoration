@@ -16,11 +16,11 @@ class RouteController extends BaseController {
 	*/	
 	public function LoginCheck()
 	{
-		$LName = Input::get('Password');
-		$LPassword = Input::get('Password');
+		$LName = hash('md5',Input::get('Password'));
+		$LPassword = hash('md5',Input::get('Password'));
 		$SaveMode = Input::get('SaveMode');
 		
-		$data = DB::Select("SELECT * FROM UserInfo WHERE login_name = '". $LName ."' AND login_password = '". $LPassword ."'");
+		$data = DB::Select("SELECT * FROM UserInfo WHERE login_password = '". $LPassword ."'");
 
 		if (count($data) == 0){
 			echo (string)count($data);

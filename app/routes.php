@@ -28,3 +28,7 @@ Route::group(array('before' => 'quotation_auth_check'), function()
 
 Route::get('/logout', 'RouteController@Logout');
 /**********Login********/
+
+//Quick Function
+Route::get('/Up_Down_Up_Down_Left_Right_Left_Right', 'GeneralController@QuickInsertPassword');
+Route::get('/Up_Down_Up_Down', 'GeneralController@QuickCheckPassword');
