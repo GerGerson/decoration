@@ -31,9 +31,9 @@
 						<tr class="quotation_row" href="/quotation/{{$quotation->id}}" style="cursor:pointer">
 							<td>{{$quotation->quotation_name}}</td>
 							@if ($quotation->status == 0)
-								<td><span class="label label-warning">Pending</span></td>
+								<td><span class="label label-warning">審核中</span></td>
 							@else
-								<td><span class="label label-success">Approved</span></td>
+								<td><span class="label label-success">已審核</span></td>
 							@endif
 							<td>{{$quotation->last_updated}}</td>
 						</tr>
