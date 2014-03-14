@@ -73,7 +73,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 				</a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="logout"><i class="fa fa-key"></i> Log Out</a>
+						<a href="/logout"><i class="fa fa-key"></i> Log Out</a>
 					</li>
 				</ul>
 			</li>
