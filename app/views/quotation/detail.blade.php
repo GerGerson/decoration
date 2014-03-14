@@ -149,7 +149,7 @@
 				
 			</div>
 		</div>
-		<div class="row">
+		<div class="row mobile">
 			<div class="col-xs-5">
 				<p>
 					公司簽署
@@ -173,7 +173,7 @@
 			</div>
 			<br/>
 		</div>
-		<div class="row">
+		<div class="row mobile">
 			<div class="col-xs-5">
 			</div>
 			<div class="col-xs-5" style="text-align: right;">
@@ -184,5 +184,15 @@
 	</div>
 	<!-- END PAGE CONTENT-->
 </div>
+
+<script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script>
+jQuery(document).ready(function($) {
+	
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('.mobile').hide();
+	}
+});
+</script>
 
 @stop
